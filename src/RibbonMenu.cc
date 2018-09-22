@@ -16,12 +16,13 @@
 
 #include <RibbonMenu.hh>
 
+#include <CustomWindow/CustomWindow.hh>
+
 namespace QtRibbon
 {
 
 RibbonMenu::RibbonMenu(QWidget *parent) :
-	QWidget(parent)
-{}
+	QWidget(parent) {}
 
 RibbonMenu::RibbonMenu(CustomWindow::CustomWindow *parent) :
 	QWidget(parent),

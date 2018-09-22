@@ -17,13 +17,15 @@
 #ifndef RIBBONMENU_HH_
 #define RIBBONMENU_HH_
 
-#include <CustomWindow.hh>
-
 #include <QWidget>
 
 #include <vector>
 
 class QPaintEvent;
+
+namespace CustomWindow {
+class CustomWindow;
+}
 
 namespace QtRibbon {
 
@@ -70,10 +72,10 @@ protected:
     void paintEvent(QPaintEvent *evt);
 
 private:
-    std::vector<RibbonTab> mTabs;
-    std::vector<RibbonTabGroup> mTabGroups;
-    RibbonQuickBar &mQuickBar;
-    RibbonQuickMenu &mQuickMenu;
+    std::vector<RibbonTab*> mTabs;
+    std::vector<RibbonTabGroup*> mTabGroups;
+    RibbonQuickBar *mQuickBar;
+    RibbonQuickMenu *mQuickMenu;
 
     int mErrorCode;
 

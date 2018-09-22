@@ -8,15 +8,15 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 include_directories(${CMAKE_SOURCE_DIR}/third-party/CustomWindow)
 
 if(WIN32)
-    set (CMAKE_PREFIX_PATH "C:\\Qt\\5.11.2\\msvc2017_64\\")
+    set (CMAKE_PREFIX_PATH "D:\\Qt\\5.11.0\\msvc2017_64\\")
 endif()
 
 set(
     SOURCE_FILES
     include/RibbonMenu.hh
     src/RibbonMenu.cc
-	third-party/CustomWindow/CustomWindow.hh
-	third-party/CustomWindow/CustomWindow.cc
+    third-party/CustomWindow/CustomWindow/CustomWindow.hh
+    third-party/CustomWindow/CustomWindow/CustomWindow.cc
 )
 
 set(QRC_FILES)
